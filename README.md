@@ -1,2 +1,2 @@
-# -IT-Academy-2lesson
+# -IT-Academy-lessons
 Uploaded 1st lesson task file

@@ -32,7 +32,6 @@ p_1, p_2  = player_1, player_2
 
 print(Fore.LIGHTCYAN_EX)
 print("Приветствую,", player_1, "и", player_2, "!")
-
 x = ("X")
 o = ("O")
 c = ("Отлично! Игрок")
@@ -73,7 +72,7 @@ if g==2:
 
 
 print(Fore.WHITE)
-u = input("Как правило, первым совершает игрок, чьим символом является «Х». \nВ зависимости от выбранного Вами ответа («+» или «-») я пойму, желаете ли Вы следовать этому правилу:")
+u = input("Как правило, первый ход совершает игрок, чьим символом является «Х». \nВ зависимости от выбранного Вами ответа («+» или «-») я пойму, желаете ли Вы следовать этому правилу:")
 p = ("+")
 p_1 = ("/'+'/")
 p_2 = ('/"+"/')
@@ -117,6 +116,7 @@ xx_3 = int(((u==p or u==p_1 or u==p_2 or u==p_3) and g==1) or ((u!=p or u!=p_1 o
 xx_4 = int(((u!=p and f==1) or (u!=p_1 and f==1) or (u!=p_2 and f==1) or (u!=p_3 and f==1)) or ((u==p or u==p_1 or u==p_2 or u==p_3) and g==2))
 
 
+win_combo = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (1, 4, 7), (2, 5, 8), (3, 6, 9), (1, 5, 9), (3, 5, 7)]
 board = list(range(1, 10))
 
 
@@ -156,6 +156,7 @@ def main():
     counter = 0
     while True:
         if xx_1==True:
+            os.system('cls' if os.name=='nt' else 'clear')
             print(Fore.MAGENTA)
             draw_board()
             print(Fore.WHITE)
@@ -164,16 +165,16 @@ def main():
             else:
                 take_input(o)
             if counter > 3:
-                winner = check_win()
-                if winner:
+                victory = check_win()
+                if victory:
                     print(Fore.GREEN)
                     draw_board()
-                    if winner==check_win() and winner==x:
+                    if victory==check_win() and victory==x:
                         print(Fore.BLUE)
                         print(player_1, "победил(-a!")
                         print(Fore.WHITE)
                         break
-                    if winner==check_win() and winner==o:
+                    if victory==check_win() and victory==o:
                         print(Fore.BLUE)
                         print(player_2, "победил(-a!")
                         print(Fore.WHITE)
@@ -186,6 +187,7 @@ def main():
                 print(Fore.WHITE)
                 break
         elif xx_2==True:
+            os.system('cls' if os.name=='nt' else 'clear')
             print(Fore.MAGENTA)
             draw_board()
             print(Fore.WHITE)
@@ -194,16 +196,16 @@ def main():
             else:
                 take_input(x)
             if counter > 3:
-                winner = check_win()
-                if winner:
+                victory = check_win()
+                if victory:
                     print(Fore.GREEN)
                     draw_board()
-                    if winner==check_win() and winner==o:
+                    if victory==check_win() and victory==o:
                         print(Fore.BLUE)
                         print(player_1, "победил(-a!")
                         print(Fore.WHITE)
                         break
-                    if winner==check_win() and winner==x:
+                    if victory==check_win() and victory==x:
                         print(Fore.BLUE)
                         print(player_2, "победил(-a!")
                         print(Fore.WHITE)
@@ -216,6 +218,7 @@ def main():
                 print(Fore.WHITE)
                 break
         elif xx_3==True:
+            os.system('cls' if os.name=='nt' else 'clear')
             print(Fore.MAGENTA)
             draw_board()
             print(Fore.WHITE)
@@ -224,16 +227,16 @@ def main():
             else:
                 take_input(o)
             if counter > 3:
-                winner = check_win()
-                if winner:
+                victory = check_win()
+                if victory:
                     print(Fore.GREEN)
                     draw_board()
-                    if winner==check_win() and winner==x:
+                    if victory==check_win() and victory==x:
                         print(Fore.BLUE)
                         print(player_2, "победил(-a!")
                         print(Fore.WHITE)
                         break
-                    if winner==check_win() and winner==o:
+                    if victory==check_win() and victory==o:
                         print(Fore.BLUE)
                         print(player_1, "победил(-a!")
                         print(Fore.WHITE)
@@ -246,6 +249,7 @@ def main():
                 print(Fore.WHITE)
                 break
         elif xx_4==True:
+            os.system('cls' if os.name=='nt' else 'clear')
             print(Fore.MAGENTA)
             draw_board()
             print(Fore.WHITE)
@@ -254,16 +258,16 @@ def main():
             else:
                 take_input(x)
             if counter > 3:
-                winner = check_win()
-                if winner:
+                victory = check_win()
+                if victory:
                     print(Fore.GREEN)
                     draw_board()
-                    if winner==check_win() and winner==o:
+                    if victory==check_win() and victory==o:
                         print(Fore.BLUE)
                         print(player_2, "победил(-а)!")
                         print(Fore.WHITE)
                         break
-                    if winner==check_win() and winner==x:
+                    if victory==check_win() and victory==x:
                         print(Fore.BLUE)
                         print(player_1, "победил(-а)!")
                         print(Fore.WHITE)

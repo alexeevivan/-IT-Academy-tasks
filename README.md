@@ -1,2 +1,2 @@
 # -IT-Academy-lessons
-Uploaded 1st lesson task file
+Uploaded task file «Tic-tac-toe game»

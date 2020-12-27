@@ -10,7 +10,6 @@ while lang_selection!=1 and lang_selection!=2:
     print(Fore.WHITE)
     lang_selection = int(input("Для выбора русского языка введите «1»\nTo choose english language press «2»:"))
 
-
 if lang_selection==1:
 # задаём значения всем переменным, которые будут встречаться в коде, при этом не требующие ввода данных от игроков
     j = ("\nВас приветствует игра «-Tic-Tac-Toe-» !!! \nКаждая ячейка выделена цифровым индикатором для удобства планирования ходов.")
@@ -43,7 +42,6 @@ if lang_selection==1:
     m_2 = ('/"-"/')
     m_3 = ("«-»")
     m_4 = m or m_1 or m_2 or m_3
-
 
     print(j)
     print(Fore.MAGENTA, b2)
@@ -300,6 +298,7 @@ if lang_selection==1:
             
 
     main()
+
 elif lang_selection==2:
     # задаём значения всем переменным, которые будут встречаться в коде, при этом не требующие ввода данных от игроков
     j = ("\nWelcome to the «Tic-Tac-Toe» game!!! \nEach cell is highlighted with a digital indicator for easy planning of moves.")
@@ -332,7 +331,6 @@ elif lang_selection==2:
     m_2 = ('/"-"/')
     m_3 = ("«-»")
     m_4 = m or m_1 or m_2 or m_3
-
 
     print(j)
     print(Fore.MAGENTA, b2)

@@ -5,13 +5,13 @@ from colorama import init
 from colorama import Fore, Back, Style
 
 
-# «L.V.19 LLC» - случайное название компании в качестве примера
+# «L.V.19 LLC» - random company name as an example
 a = ("A list of employees of the company «L.V.19 LLC».")
 b = ("Documentation related to taxation issues of the company «L.V.19 LLC».")
 c = ("Constituent documents (articles of association, licenses, etc.)")
 
 welcome_message = ("\nWelcome to the «About us» section.")
-# ознакомительная информация
+# introductory information
 menu_list_introductory = """
 \n1. A list of employees of the company «L.V.19 LLC»
 — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — 
@@ -20,7 +20,7 @@ menu_list_introductory = """
 \n3. Constituent documents (articles of association, licenses, etc.)
 — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — 
 """
-# информация, доступная после успешного входа
+# information available after successful login
 menu_list_main = """
 \n1. A list related to the employees of the company «L.V.19 LLC»
 \n\t1.1 «L.V.19 LLC» list of employees by the position
@@ -37,7 +37,7 @@ menu_list_main = """
 — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — 
 """
 
-# доступные имена пользователей и пароли
+# the available user names and passwords
 usernames = ["Ivan", "Julia", "Ian"]
 user_1 = usernames[0]
 user_2 = usernames[1]

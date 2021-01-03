@@ -11,6 +11,7 @@ b = ("Documentation related to taxation issues of the company «L.V.19 LLC».")
 c = ("Constituent documents (articles of association, licenses, etc.)")
 
 welcome_message = ("\nWelcome to the «About us» section.")
+
 # introductory information
 menu_list_introductory = """
 \n1. A list of employees of the company «L.V.19 LLC»
@@ -52,6 +53,7 @@ print(welcome_message, Fore.MAGENTA, menu_list_introductory, Fore.WHITE)
 expaining_message = ("For further viewing of the information provided below, please complete the authentication procedeure.")
 print(expaining_message)
 request_message_2 = int(input("\nPlease enter 1 to continue:"))
+
 while request_message_2!=1:
     print(Fore.RED)
     print("An invalid response was entered. Try again or return to homepage.", Fore.WHITE)
@@ -71,6 +73,7 @@ def access_to_login(func):
 
 
 username_request = str.title(input("Please enter your nickname:"))
+
 if username_request in usernames:
     @access_to_login
     def login():

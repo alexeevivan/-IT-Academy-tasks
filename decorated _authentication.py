@@ -50,8 +50,8 @@ key_3 = keys[2]
 
 print(welcome_message, Fore.MAGENTA, menu_list_introductory, Fore.WHITE)
 
-expaining_message = ("For further viewing of the information provided below, please complete the authentication procedeure.")
-print(expaining_message)
+explaining_message = ("For further viewing of the information provided below, please complete the authentication procedeure.")
+print(explaining_message)
 request_message_2 = int(input("\nPlease enter 1 to continue:"))
 
 while request_message_2!=1:

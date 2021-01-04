@@ -62,22 +62,22 @@ if request_message_2==1:
 
 
 def access_to_login(func):
-    def wrapper(*args):
+    def wrapper():
         sleep(1)
         os.system('cls' if os.name=='nt' else 'clear')
         print(Fore.GREEN)
-        func(*args)
+        func()
         print(Fore.WHITE)
     return wrapper
 
 
 @access_to_login
-def login(username_request):
+def login():
     print("Got it.\nUsername accepted:", username_request)
 
 
 @access_to_login
-def password(password_request):
+def password():
     print("Got it.\nNow you are able to discover the files i have.")
     print(Fore.CYAN, menu_list_main)
 
@@ -85,14 +85,14 @@ def password(password_request):
 username_request = str.title(input("Please enter your nickname:"))
 
 if username_request in usernames:
-    login(username_request)
+    login()
     password_request = int(input("Enter a password:"))
     if password_request==keys[0] and username_request==user_1:
-        password(password_request)
+        password()
     elif password_request==keys[1] and username_request==user_2:
-        password(password_request)
+        password()
     elif password_request==keys[2] and username_request==user_3:
-        password(password_request)
+        password()
     else:
         os.system('cls' if os.name=='nt' else 'clear')
         print(Fore.RED)

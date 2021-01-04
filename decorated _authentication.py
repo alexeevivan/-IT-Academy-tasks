@@ -10,7 +10,7 @@ a = "A list of employees of the company «L.V.19 LLC»."
 b = "Documentation related to taxation issues of the company «L.V.19 LLC»."
 c = "Constituent documents (articles of association, licenses, etc.)"
 
-welcome_message = ("\nWelcome to the «About us» section.")
+welcome_message = "\nWelcome to the «About us» section."
 
 # introductory information
 menu_list_introductory = """
@@ -62,35 +62,38 @@ if request_message_2==1:
     os.system('cls' if os.name=='nt' else 'clear')
 
 
+def access_to_login(func):
+    def wrapper(*args):
+        sleep(1)
+        os.system('cls' if os.name=='nt' else 'clear')
+        print(Fore.GREEN)
+        func(*args)
+        print(Fore.WHITE)
+    return wrapper
 
+
+@access_to_login
+def login(username_request):
+    print("Got it.\nUsername accepted:", username_request)
+
+
+@access_to_login
+def password(password_request):
+    print("Got it.\nNow you are able to discover the files i have.")
+    print(Fore.CYAN, menu_list_main)
 
 
 username_request = str.title(input("Please enter your nickname:"))
 
 if username_request in usernames:
-    
-    def login():
-        print("Got it.\nUsername accepted:", username_request)
-    login()
+    login(username_request)
     password_request = int(input("Enter a password:"))
     if password_request==keys[0] and username_request==user_1:
-        
-        def password():
-            print("Got it.\nNow you are able to discover the files i have.")
-            print(Fore.CYAN, menu_list_main)
-        password()
+        password(password_request)
     elif password_request==keys[1] and username_request==user_2:
-        
-        def password():
-            print("Got it.\nNow you are able to discover the files i have.")
-            print(Fore.CYAN, menu_list_main)
-        password()
+        password(password_request)
     elif password_request==keys[2] and username_request==user_3:
-        
-        def password():
-            print("Got it.\nNow you are able to discover the files i have.")
-            print(Fore.CYAN, menu_list_main)
-        password()
+        password(password_request)
     else:
         os.system('cls' if os.name=='nt' else 'clear')
         print(Fore.RED)

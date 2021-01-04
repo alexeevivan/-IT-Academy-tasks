@@ -4,7 +4,6 @@ from time import sleep
 from colorama import init
 from colorama import Fore, Back, Style
 
-
 # «L.V.19 LLC» - random company name as an example
 a = "A list of employees of the company «L.V.19 LLC»."
 b = "Documentation related to taxation issues of the company «L.V.19 LLC»."

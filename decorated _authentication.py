@@ -6,9 +6,9 @@ from colorama import Fore, Back, Style
 
 
 # «L.V.19 LLC» - random company name as an example
-a = ("A list of employees of the company «L.V.19 LLC».")
-b = ("Documentation related to taxation issues of the company «L.V.19 LLC».")
-c = ("Constituent documents (articles of association, licenses, etc.)")
+a = "A list of employees of the company «L.V.19 LLC»."
+b = "Documentation related to taxation issues of the company «L.V.19 LLC»."
+c = "Constituent documents (articles of association, licenses, etc.)"
 
 welcome_message = ("\nWelcome to the «About us» section.")
 
@@ -50,7 +50,7 @@ key_3 = keys[2]
 
 print(welcome_message, Fore.MAGENTA, menu_list_introductory, Fore.WHITE)
 
-explaining_message = ("For further viewing of the information provided below, please complete the authentication procedeure.")
+explaining_message = "For further viewing of the information provided below, please complete the authentication procedeure."
 print(explaining_message)
 request_message_2 = int(input("\nPlease enter 1 to continue:"))
 
@@ -62,38 +62,31 @@ if request_message_2==1:
     os.system('cls' if os.name=='nt' else 'clear')
 
 
-def access_to_login(func):
-    def wrapper(*args):
-        sleep(1)
-        os.system('cls' if os.name=='nt' else 'clear')
-        print(Fore.GREEN)
-        func(*args)
-        print(Fore.WHITE)
-    return wrapper
+
 
 
 username_request = str.title(input("Please enter your nickname:"))
 
 if username_request in usernames:
-    @access_to_login
+    
     def login():
         print("Got it.\nUsername accepted:", username_request)
     login()
     password_request = int(input("Enter a password:"))
     if password_request==keys[0] and username_request==user_1:
-        @access_to_login
+        
         def password():
             print("Got it.\nNow you are able to discover the files i have.")
             print(Fore.CYAN, menu_list_main)
         password()
     elif password_request==keys[1] and username_request==user_2:
-        @access_to_login
+        
         def password():
             print("Got it.\nNow you are able to discover the files i have.")
             print(Fore.CYAN, menu_list_main)
         password()
     elif password_request==keys[2] and username_request==user_3:
-        @access_to_login
+        
         def password():
             print("Got it.\nNow you are able to discover the files i have.")
             print(Fore.CYAN, menu_list_main)
